@@ -1,5 +1,3 @@
-import 'dart:html' as html;
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/strings.dart';
@@ -7,6 +5,7 @@ import 'package:portfolio/constants/text_styles.dart';
 import 'package:portfolio/utils/hover/custom_cursor_widget.dart';
 import 'package:portfolio/widgets/circle_widget.dart';
 import 'package:portfolio/widgets/responsive_widget.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HireWidget extends StatefulWidget {
   const HireWidget({super.key});
@@ -24,7 +23,7 @@ class HireWidgetState extends State<HireWidget> {
   }
 
   Widget _buildBody(BuildContext context) {
-    var child;
+    Widget? child;
 
     if (ResponsiveWidget.isLargeScreen(context)) {
       child = _buildLargeScreenContent(context);
@@ -34,7 +33,7 @@ class HireWidgetState extends State<HireWidget> {
       child = _buildSmallScreenContent(context);
     }
 
-    return child;
+    return child!;
   }
 
   Widget _buildLargeScreenContent(BuildContext context) {
@@ -240,19 +239,19 @@ class HireWidgetState extends State<HireWidget> {
       child: CustomCursor(
         child: RichText(
           text: TextSpan(
-            text: Strings.always_interested,
+            text: Strings.alwaysInterested,
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                html.window.open(Strings.menu_mail_link, Strings.menu_mail);
+                _launchURL(Strings.menuMailLink);
               },
-            style: TextStyles.sub_heading.copyWith(
+            style: TextStyles.subHeading.copyWith(
               fontSize: fontSize,
               height: 1.5,
             ),
             children: [
               TextSpan(
-                text: Strings.lets_talk,
-                style: TextStyles.sub_heading.copyWith(
+                text: Strings.letsTalk,
+                style: TextStyles.subHeading.copyWith(
                   fontSize: fontSize,
                   height: 1.5,
                   color: const Color(0xFFff5353),
@@ -268,9 +267,16 @@ class HireWidgetState extends State<HireWidget> {
     );
   }
 
+  Future<void> _launchURL(String link) async {
+    if (await canLaunchUrlString(link)) {
+      await launchUrlString(link);
+    } else {
+      throw 'Could not launch $link';
+    }
+  }
+
   // general methods:-----------------------------------------------------------
   void _mouseEnter(bool hover) {
-    print('mouse event: $hover');
     setState(() {
       _hovering = hover;
     });

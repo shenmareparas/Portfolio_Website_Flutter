@@ -1,4 +1,3 @@
-import 'dart:html' as html;
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/strings.dart';
 import 'package:portfolio/constants/text_styles.dart';
@@ -9,6 +8,7 @@ import 'package:portfolio/ui/pages/skills.dart';
 import 'package:portfolio/utils/hover/custom_cursor_widget.dart';
 import 'package:portfolio/utils/screen/screen_utils.dart';
 import 'package:portfolio/widgets/responsive_widget.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -88,7 +88,6 @@ class HomePageState extends State<HomePage> {
                 if (!isSmallScreen) {
                   Future.delayed(Duration.zero, () {
                     setState(() {
-                      print('insdie callback');
                       isSmallScreen = true;
                     });
                   });
@@ -98,7 +97,6 @@ class HomePageState extends State<HomePage> {
                 if (isSmallScreen) {
                   Future.delayed(Duration.zero, () {
                     setState(() {
-                      print('insdie callback');
                       isSmallScreen = false;
                     });
                   });
@@ -108,7 +106,6 @@ class HomePageState extends State<HomePage> {
                 if (isSmallScreen) {
                   Future.delayed(Duration.zero, () {
                     setState(() {
-                      print('insdie callback');
                       isSmallScreen = false;
                     });
                   });
@@ -195,13 +192,13 @@ class HomePageState extends State<HomePage> {
         direction: axis,
         children: <Widget>[
           _buildMenuItem(
-              quarterTurns, Strings.menu_github_link, Strings.menu_github),
+              quarterTurns, Strings.menuGithubLink, Strings.menuGithub),
           _buildMenuItem(
-              quarterTurns, Strings.menu_linkedin_link, Strings.menu_linkedin),
-          _buildMenuItem(quarterTurns, Strings.menu_instagram_link,
-              Strings.menu_instagram),
+              quarterTurns, Strings.menuLinkedinLink, Strings.menuLinkedin),
           _buildMenuItem(
-              quarterTurns, Strings.menu_twitter_link, Strings.menu_twitter),
+              quarterTurns, Strings.menuInstagramLink, Strings.menuInstagram),
+          _buildMenuItem(
+              quarterTurns, Strings.menuTwitterLink, Strings.menuTwitter),
         ],
       ),
     );
@@ -216,14 +213,22 @@ class HomePageState extends State<HomePage> {
           hoverColor: const Color(0xFF00bcd5),
           child: Text(
             title,
-            style: TextStyles.menu_item,
+            style: TextStyles.menuItem,
           ),
           onPressed: () {
-            html.window.open(link, title);
+            _launchURL(link);
           },
         ),
       ),
     );
+  }
+
+  Future<void> _launchURL(String link) async {
+    if (await canLaunchUrlString(link)) {
+      await launchUrlString(link);
+    } else {
+      throw 'Could not launch $link';
+    }
   }
 
   Widget _buildMadeWith({Alignment alignment = Alignment.bottomLeft}) {
@@ -243,7 +248,7 @@ class HomePageState extends State<HomePage> {
               RotatedBox(
                 quarterTurns: 3,
                 child: Text(
-                  Strings.in_flutter,
+                  Strings.inFlutter,
                   style: TextStyles.strikeThrough,
                 ),
               ),
@@ -259,7 +264,7 @@ class HomePageState extends State<HomePage> {
               RotatedBox(
                 quarterTurns: 3,
                 child: Text(
-                  Strings.made_with,
+                  Strings.madeWith,
                   style: TextStyles.strikeThrough,
                 ),
               ),

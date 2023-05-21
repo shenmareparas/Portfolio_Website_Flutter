@@ -19,7 +19,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
   }
 
   Widget _buildBody(BuildContext context) {
-    var child;
+    Widget? child;
 
     if (ResponsiveWidget.isLargeScreen(context)) {
       child = _buildLargeScreenContent(context);
@@ -29,7 +29,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
       child = _buildSmallScreenContent(context);
     }
 
-    return child;
+    return child!;
   }
 
   Widget _buildLargeScreenContent(BuildContext context) {
@@ -248,26 +248,17 @@ class SkillsWidgetState extends State<SkillsWidget> {
   }
 
   // general widgets:-----------------------------------------------------------
-  Widget _buildDesign() {
-    return Center(
-      child: Text(
-        Strings.skills,
-        style: TextStyles.heading,
-      ),
-    );
-  }
-
   Widget _buildSkills({double? fontSize}) {
     return RichText(
       text: TextSpan(
         text: Strings.skills,
-        style: TextStyles.sub_heading.copyWith(
+        style: TextStyles.subHeading.copyWith(
           fontSize: fontSize,
         ),
         children: <TextSpan>[
           TextSpan(
             text: ':',
-            style: TextStyles.sub_heading.copyWith(
+            style: TextStyles.subHeading.copyWith(
               fontSize: fontSize,
               color: const Color(0xFFff5353),
             ),
@@ -298,7 +289,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
 
   Widget _buildSkillsContainerHeading({double? fontSize}) {
     return Text(
-      Strings.skills_i_have,
+      Strings.skillsIhave,
       style: TextStyles.body.copyWith(fontSize: fontSize),
     );
   }

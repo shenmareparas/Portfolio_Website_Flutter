@@ -18,7 +18,7 @@ class AboutWidgetState extends State<AboutWidget> {
   }
 
   Widget _buildBody(BuildContext context) {
-    var child;
+    Widget? child;
 
     if (ResponsiveWidget.isLargeScreen(context)) {
       child = _buildLargeScreenContent(context);
@@ -28,7 +28,7 @@ class AboutWidgetState extends State<AboutWidget> {
       child = _buildSmallScreenContent(context);
     }
 
-    return child;
+    return child!;
   }
 
   Widget _buildLargeScreenContent(BuildContext context) {
@@ -234,15 +234,6 @@ class AboutWidgetState extends State<AboutWidget> {
   }
 
   // general widgets:-----------------------------------------------------------
-  Widget _buildDesign({double? fontSize}) {
-    return Center(
-      child: Text(
-        Strings.about,
-        style: TextStyles.heading.copyWith(fontSize: fontSize),
-      ),
-    );
-  }
-
   Widget _buildSummary({int quarterTurns = 3, double? fontSize}) {
     return Text(
       Strings.summary,
@@ -255,11 +246,11 @@ class AboutWidgetState extends State<AboutWidget> {
     return RichText(
       text: TextSpan(
         text: Strings.about,
-        style: TextStyles.sub_heading.copyWith(fontSize: fontSize),
+        style: TextStyles.subHeading.copyWith(fontSize: fontSize),
         children: <TextSpan>[
           TextSpan(
             text: ':',
-            style: TextStyles.sub_heading.copyWith(
+            style: TextStyles.subHeading.copyWith(
               color: const Color(0xFFff5353),
               fontSize: fontSize,
             ),

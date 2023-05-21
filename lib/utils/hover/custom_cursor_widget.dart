@@ -72,7 +72,7 @@ class StrikeThroughOnHoverState extends State<StrikeThroughOnHover> {
   final nonHoverTransform = Matrix4.identity()..translate(0, 0, 0);
   final hoverTransform = Matrix4.identity()..translate(0, -10, 0);
 
-  bool _hovering = false;
+  final bool _hovering = false;
 
   @override
   Widget build(BuildContext context) {
@@ -85,11 +85,5 @@ class StrikeThroughOnHoverState extends State<StrikeThroughOnHover> {
         child: widget.child,
       ),
     );
-  }
-
-  void _mouseEnter(bool hover) {
-    setState(() {
-      _hovering = hover;
-    });
   }
 }

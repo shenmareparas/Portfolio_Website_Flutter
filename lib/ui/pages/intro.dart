@@ -21,7 +21,7 @@ class IntroWidgetState extends State<IntroWidget> {
   }
 
   Widget _buildBody(BuildContext context) {
-    var child;
+    Widget? child;
 
     if (ResponsiveWidget.isLargeScreen(context)) {
       child = _buildLargeScreenContent(context);
@@ -31,7 +31,7 @@ class IntroWidgetState extends State<IntroWidget> {
       child = _buildSmallScreenContent(context);
     }
 
-    return child;
+    return child!;
   }
 
   Widget _buildLargeScreenContent(BuildContext context) {
@@ -296,7 +296,7 @@ class IntroWidgetState extends State<IntroWidget> {
             ),
             children: <TextSpan>[
               TextSpan(
-                text: Strings.this_web,
+                text: Strings.thisWeb,
                 style: TextStyles.body.copyWith(
                   color: Colors.grey,
                   fontSize: 12.0,
@@ -332,7 +332,7 @@ class IntroWidgetState extends State<IntroWidget> {
     return RotatedBox(
       quarterTurns: quarterTurns,
       child: Text(
-        Strings.mobile_dev,
+        Strings.mobileDev,
         style: TextStyles.body.copyWith(
           fontSize: fontSize,
         ),
@@ -344,18 +344,18 @@ class IntroWidgetState extends State<IntroWidget> {
     return RichText(
       text: TextSpan(
         text: Strings.hello,
-        style: TextStyles.sub_heading.copyWith(fontSize: fontSize),
+        style: TextStyles.subHeading.copyWith(fontSize: fontSize),
         children: <TextSpan>[
           TextSpan(
             text: '.',
-            style: TextStyles.sub_heading.copyWith(
+            style: TextStyles.subHeading.copyWith(
               fontSize: fontSize,
               color: const Color(0xFFff5353),
             ),
           ),
           TextSpan(
-            text: Strings.i_am_paras,
-            style: TextStyles.sub_heading.copyWith(
+            text: Strings.iamParas,
+            style: TextStyles.subHeading.copyWith(
               fontSize: fontSize,
             ),
           )

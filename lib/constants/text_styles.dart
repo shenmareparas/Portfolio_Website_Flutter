@@ -12,7 +12,7 @@ class TextStyles {
         color: Colors.white,
       );
 
-  static TextStyle get menu_item => const TextStyle(
+  static TextStyle get menuItem => const TextStyle(
         fontFamily: Fonts.inconsolata,
         fontSize: 16.0,
         color: Colors.white,
@@ -21,10 +21,10 @@ class TextStyles {
 
   static TextStyle get heading => const TextStyle(
         color: Color(0xFF1e1e1e),
-        fontFamily: Fonts.nexa_bold,
+        fontFamily: Fonts.nexaBold,
       );
 
-  static TextStyle get sub_heading => const TextStyle(
+  static TextStyle get subHeading => const TextStyle(
         color: Colors.white,
         letterSpacing: 1.5,
         height: 1.0,

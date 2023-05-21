@@ -5,21 +5,21 @@ class Strings {
 
   // home:----------------------------------------------------------------------
   static const String portfolio = 'Portfolio';
-  static const String this_web = 'Yes this website uses f***ing ';
+  static const String thisWeb = 'Yes this website uses f***ing ';
   static const String cookies = 'cookies';
-  static const String made_with = 'Made with';
+  static const String madeWith = 'Made with';
   static const String heart = ' ❤ ';
-  static const String in_flutter = 'in Flutter';
+  static const String inFlutter = 'in Flutter';
 
   // intro:---------------------------------------------------------------------
   static const String hello = 'Hello';
-  static const String i_am_paras = '\nI am\nParas';
+  static const String iamParas = '\nI am\nParas';
   static const String design = 'DES_\nIGN';
-  static const String mobile_dev =
+  static const String mobileDev =
       'Flutter Developer\nbased in Maharashtra,\nIndia.';
 
   // about:---------------------------------------------------------------------
-  static const String about_me = 'About Me';
+  static const String aboutMe = 'About Me';
   static const String about = 'Ab_\nout';
   static const String me = ' Me';
   static const String headline =
@@ -29,8 +29,8 @@ class Strings {
   // skills:--------------------------------------------------------------------
   static const String skills = 'Sk_\nills';
   static const String experience = 'Experience';
-  static const String skills_i_have = 'What Skills I Have';
-  static const String rights_reserved = '© 2023 ALL RIGHTS RESERVED.';
+  static const String skillsIhave = 'What Skills I Have';
+  static const String rightsReserved = '© 2023 ALL RIGHTS RESERVED.';
 
   static final skillsList = [
     'Flutter',
@@ -74,23 +74,23 @@ class Strings {
 
   // hire:----------------------------------------------------------------------
   static const String hire = 'HIRE';
-  static const String always_interested =
+  static const String alwaysInterested =
       'I\'m always interested about cool stuff. Are you minding a project?\n';
-  static const String lets_talk = 'Let\'s talk.';
+  static const String letsTalk = 'Let\'s talk.';
 
   // menu items:----------------------------------------------------------------
-  static const String menu_instagram = 'INSTAGRAM';
-  static const String menu_twitter = 'TWITTER';
-  static const String menu_linkedin = 'LINKEDIN';
-  static const String menu_github = 'GITHUB';
-  static const String menu_mail = 'MAIL';
+  static const String menuInstagram = 'INSTAGRAM';
+  static const String menuTwitter = 'TWITTER';
+  static const String menuLinkedin = 'LINKEDIN';
+  static const String menuGithub = 'GITHUB';
+  static const String menuMail = 'MAIL';
 
   // links:---------------------------------------------------------------------
-  static const String menu_instagram_link =
+  static const String menuInstagramLink =
       'https://www.instagram.com/paras_shenmare/';
-  static const String menu_twitter_link = 'https://twitter.com/paras_shenmare';
-  static const String menu_linkedin_link =
+  static const String menuTwitterLink = 'https://twitter.com/paras_shenmare';
+  static const String menuLinkedinLink =
       'https://www.linkedin.com/in/parasshenmare';
-  static const String menu_github_link = 'https://github.com/shenmareparas';
-  static const String menu_mail_link = 'mailto:shenmareparas@gmail.com';
+  static const String menuGithubLink = 'https://github.com/shenmareparas';
+  static const String menuMailLink = 'mailto:shenmareparas@gmail.com';
 }
