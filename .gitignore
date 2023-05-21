@@ -5,7 +5,8 @@
 pubspec.lock
 
 # Conventional directory for build outputs
-build/
+build/*
+!web
 
 # Directory created by dartdoc
 doc/api/
