@@ -81,7 +81,7 @@ class Strings {
   // menu items:----------------------------------------------------------------
   static const String menu_instagram = 'INSTAGRAM';
   static const String menu_twitter = 'TWITTER';
-  static const String menu_linked_in = 'LINKEDIN';
+  static const String menu_linkedin = 'LINKEDIN';
   static const String menu_github = 'GITHUB';
   static const String menu_mail = 'MAIL';
 
@@ -89,7 +89,7 @@ class Strings {
   static const String menu_instagram_link =
       'https://www.instagram.com/paras_shenmare/';
   static const String menu_twitter_link = 'https://twitter.com/paras_shenmare';
-  static const String menu_linked_in_link =
+  static const String menu_linkedin_link =
       'https://www.linkedin.com/in/parasshenmare';
   static const String menu_github_link = 'https://github.com/shenmareparas';
   static const String menu_mail_link = 'mailto:shenmareparas@gmail.com';

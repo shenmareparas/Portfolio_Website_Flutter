@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Paras Shenmare',
       color: const Color(0xFF2c2f32),
       theme: ThemeData(brightness: Brightness.light),
       home: const MyAppChild(),

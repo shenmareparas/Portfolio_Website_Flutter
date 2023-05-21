@@ -10086,12 +10086,13 @@ JJ:function JJ(){},
 arh(){return new A.uf(new A.Yd(),A.y(t.K,t.Qu))},
 a3A:function a3A(a,b){this.a=a
 this.b=b},
-uX:function uX(a,b,c,d,e){var _=this
+uX:function uX(a,b,c,d,e,f){var _=this
 _.e=a
-_.cy=b
-_.go=c
-_.p4=d
-_.a=e},
+_.CW=b
+_.cy=c
+_.go=d
+_.p4=e
+_.a=f},
 Yd:function Yd(){},
 Yh:function Yh(){},
 yS:function yS(a){var _=this
@@ -42183,11 +42184,11 @@ if(l==null)l=o.ax.b
 k.a.toString
 s=b==null?B.bW:b
 return new A.wy(A.ag_(new A.rK(o,s,B.ax,B.ay,j,j),l,n),j)},
-SC(a){var s,r=this,q=null,p=r.a,o=p.go
-p=p.e
+SC(a){var s,r=this,q=null,p=r.a,o=p.go,n=p.e
+p=p.CW
 s=r.gWV()
 r.a.toString
-return new A.xT(q,q,q,new A.a6E(),q,q,q,q,q,p,B.HR,q,q,B.Fl,r.gX1(),"",q,B.MU,o,q,s,q,q,B.kK,!1,!1,!1,!1,r.gWE(),!1,q,q,q,new A.jf(r,t.bT))},
+return new A.xT(q,q,q,new A.a6E(),q,q,q,q,q,n,B.HR,q,q,B.Fl,r.gX1(),p,q,B.MU,o,q,s,q,q,B.kK,!1,!1,!1,!1,r.gWE(),!1,q,q,q,new A.jf(r,t.bT))},
 O(a){var s,r=null,q=A.E8(!1,!1,this.SC(a),r,r,r,r,!0,r,r,new A.a6F(),r,r,r)
 this.a.toString
 s=this.d
@@ -64934,7 +64935,7 @@ A.wp.prototype={
 k(a){var s=this.b1(0),r=this.c
 return s+"["+this.b+".."+A.h(r===9007199254740991?"*":r)+"]"}}
 A.Fy.prototype={
-O(a){return new A.uX(B.Il,A.aio(B.U,null),B.zL,!1,null)}}
+O(a){return new A.uX(B.Il,"Paras Shenmare",A.aio(B.U,null),B.zL,!1,null)}}
 A.ve.prototype={
 ar(){return new A.Fz(B.l)}}
 A.Fz.prototype={
@@ -73775,7 +73776,7 @@ s($,"aCM","ann",()=>{var q=t.z,p=A.afM(A.a([$.ank(),$.anp()],t.C),null,q)
 return A.kL(A.asa(p,q),new A.aai(),t.j,A.V("d4"))})
 s($,"aCH","anj",()=>{var q=t.ob,p=A.V("d4")
 return A.ahg(A.aez(A.arI(A.aee("^",null),t.N),$.ann(),q,p),new A.aa5(),q,p,p)})
-s($,"aAU","am7",()=>A.a([A.aco("2019","73%","Susanskar Vidya Mandir, Yavatmal","Class X"),A.aco("2021","93%","Jagdamba Jr. Science College, Yavatmal","Class X"),A.aco("2025","7.44 CGPA","Vellore Institute of Technology, Bhopal","B. Tech CSE (Core)")],A.V("q<oL>")))
+s($,"aAU","am7",()=>A.a([A.aco("2019","73%","Susanskar Vidya Mandir, Yavatmal","Class X"),A.aco("2021","93%","Jagdamba Jr. Science College, Yavatmal","Class XII"),A.aco("2025","7.44 CGPA","Vellore Institute of Technology, Bhopal","B. Tech CSE (Core)")],A.V("q<oL>")))
 s($,"azI","aeL",()=>A.azl().document.getElementById("app-container"))
 r($,"asL","aby",()=>new A.a14())
 s($,"aA3","alP",()=>A.ad1())

@@ -196,8 +196,8 @@ class HomePageState extends State<HomePage> {
         children: <Widget>[
           _buildMenuItem(
               quarterTurns, Strings.menu_github_link, Strings.menu_github),
-          _buildMenuItem(quarterTurns, Strings.menu_linked_in_link,
-              Strings.menu_linked_in),
+          _buildMenuItem(
+              quarterTurns, Strings.menu_linkedin_link, Strings.menu_linkedin),
           _buildMenuItem(quarterTurns, Strings.menu_instagram_link,
               Strings.menu_instagram),
           _buildMenuItem(
