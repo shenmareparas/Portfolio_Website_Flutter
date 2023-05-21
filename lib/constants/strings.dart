@@ -62,7 +62,7 @@ class Strings {
       '2021',
       '93%',
       'Jagdamba Jr. Science College, Yavatmal',
-      'Class X',
+      'Class XII',
     ),
     Education(
       '2025',

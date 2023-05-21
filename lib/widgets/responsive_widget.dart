@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-typedef void OnSmallScreen();
-typedef void OnLargeScreen();
-typedef void OnMediumScreen();
+typedef OnSmallScreen = void Function();
+typedef OnLargeScreen = void Function();
+typedef OnMediumScreen = void Function();
 
 class ResponsiveWidget extends StatelessWidget {
   final Widget largeScreen;
@@ -44,10 +44,10 @@ class ResponsiveWidget extends StatelessWidget {
           return largeScreen;
         } else if (constraints.maxWidth < 1125 && constraints.maxWidth > 767) {
           onMediumScreen();
-          return mediumScreen ?? largeScreen;
+          return mediumScreen;
         } else {
           onSmallScreen();
-          return smallScreen ?? largeScreen;
+          return smallScreen;
         }
       },
     );

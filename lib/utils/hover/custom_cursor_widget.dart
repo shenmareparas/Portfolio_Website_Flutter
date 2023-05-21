@@ -49,8 +49,8 @@ class CustomCursor extends MouseRegion {
         );
 }
 
-typedef void OnPointerEnter(PointerEvent event);
-typedef void OnPointerExit(PointerEvent event);
+typedef OnPointerEnter = void Function(PointerEvent event);
+typedef OnPointerExit = void Function(PointerEvent event);
 
 class StrikeThroughOnHover extends StatefulWidget {
   final OnPointerEnter onEnterListener;

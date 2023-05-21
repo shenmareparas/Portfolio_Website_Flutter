@@ -6,5 +6,4 @@ class Fonts {
   static const String nexa_bold = 'NexaBold';
   static const String inconsolata = 'Inconsolata';
   static const String aquateScript = 'AquateScript';
-
 }
