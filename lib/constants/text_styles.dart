@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/constants/fonts.dart';
 
 class TextStyles {
   TextStyles._();
 
-  static TextStyle get logo => const TextStyle(
-        fontSize: 24.0,
+  static TextStyle get logo => GoogleFonts.alexBrush(
+        fontSize: 25,
         fontWeight: FontWeight.bold,
-        letterSpacing: 1.0,
-        fontFamily: Fonts.aquateScript,
+        letterSpacing: 1,
         color: Colors.white,
       );
 
   static TextStyle get menuItem => const TextStyle(
         fontFamily: Fonts.inconsolata,
-        fontSize: 16.0,
+        fontSize: 16,
         color: Colors.white,
-        letterSpacing: 1.0,
+        letterSpacing: 1,
       );
 
   static TextStyle get heading => const TextStyle(
@@ -27,7 +27,7 @@ class TextStyles {
   static TextStyle get subHeading => const TextStyle(
         color: Colors.white,
         letterSpacing: 1.5,
-        height: 1.0,
+        height: 1,
         fontFamily: Fonts.product,
         fontWeight: FontWeight.w700,
       );
@@ -36,16 +36,15 @@ class TextStyles {
         fontFamily: Fonts.inconsolata,
         color: Colors.grey[300],
         height: 1.5,
-        fontSize: 24.0,
-        letterSpacing: 1.0,
+        fontSize: 24,
+        letterSpacing: 1,
       );
 
-  static TextStyle get strikeThrough => TextStyle(
+  static TextStyle get madewith => TextStyle(
         fontFamily: Fonts.inconsolata,
         height: 1.5,
         color: Colors.grey[300],
-        fontSize: 18.0,
-        decoration: TextDecoration.lineThrough,
+        fontSize: 18,
         letterSpacing: 1.5,
       );
 
@@ -60,14 +59,14 @@ class TextStyles {
         fontFamily: Fonts.product,
         color: Color(0xFF85819C),
         height: 1.5,
-        fontSize: 10.0,
-        letterSpacing: 1.0,
+        fontSize: 10,
+        letterSpacing: 1,
       );
 
   static TextStyle get chip => const TextStyle(
         fontFamily: Fonts.inconsolata,
         height: 1.5,
-        fontSize: 12.0,
-        letterSpacing: 1.0,
+        fontSize: 12,
+        letterSpacing: 1,
       );
 }

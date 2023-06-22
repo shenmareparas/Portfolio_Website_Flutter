@@ -237,7 +237,7 @@ class AboutWidgetState extends State<AboutWidget> {
   Widget _buildSummary({int quarterTurns = 3, double? fontSize}) {
     return Text(
       Strings.summary,
-      textAlign: TextAlign.justify,
+      textAlign: TextAlign.start,
       style: TextStyles.body.copyWith(fontSize: fontSize),
     );
   }

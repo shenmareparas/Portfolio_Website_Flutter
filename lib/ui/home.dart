@@ -231,14 +231,14 @@ class HomePageState extends State<HomePage> {
                 quarterTurns: 3,
                 child: Text(
                   Strings.inFlutter,
-                  style: TextStyles.strikeThrough,
+                  style: TextStyles.madewith,
                 ),
               ),
               RotatedBox(
                 quarterTurns: 3,
                 child: Text(
                   Strings.heart,
-                  style: TextStyles.strikeThrough.copyWith(
+                  style: TextStyles.madewith.copyWith(
                     decoration: TextDecoration.none,
                   ),
                 ),
@@ -247,7 +247,7 @@ class HomePageState extends State<HomePage> {
                 quarterTurns: 3,
                 child: Text(
                   Strings.madeWith,
-                  style: TextStyles.strikeThrough,
+                  style: TextStyles.madewith,
                 ),
               ),
             ],

@@ -272,10 +272,7 @@ class IntroWidgetState extends State<IntroWidget> {
   }
 
   Widget _buildPortfolio() {
-    return Text(
-      Strings.portfolio,
-      style: TextStyles.logo,
-    );
+    return Text(Strings.portfolio, style: TextStyles.logo);
   }
 
   Widget _buildCookies() {

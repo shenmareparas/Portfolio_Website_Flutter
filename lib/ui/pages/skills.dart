@@ -164,7 +164,6 @@ class SkillsWidgetState extends State<SkillsWidget> {
         Padding(
           padding: EdgeInsets.only(
             top: MediaQuery.of(context).size.height * 0.20,
-//            left: MediaQuery.of(context).size.height * 0.10,
           ),
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -329,6 +328,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
   Widget _buildEducationSummary() {
     return Text(
       Strings.experiencesubline,
+      textAlign: TextAlign.justify,
       style: TextStyles.body,
     );
   }
