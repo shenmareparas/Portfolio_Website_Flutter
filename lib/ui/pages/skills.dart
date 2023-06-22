@@ -48,7 +48,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
         ),
         Positioned(
           left: MediaQuery.of(context).size.width * 0.16,
-          top: MediaQuery.of(context).size.width * 0.10,
+          top: MediaQuery.of(context).size.width * 0.03,
           child: const CircleWidget(
             width: 40,
             height: 40,
@@ -271,7 +271,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
   Widget _buildSkillsList(BuildContext context, {double? headingFontSize}) {
     final List<Widget> widgets = Strings.skillsList
         .map((skill) => Padding(
-              padding: const EdgeInsets.only(right: 8.0),
+              padding: const EdgeInsets.only(right: 8, bottom: 8),
               child: _buildSkillChip(context, skill),
             ))
         .toList();
@@ -328,7 +328,7 @@ class SkillsWidgetState extends State<SkillsWidget> {
 
   Widget _buildEducationSummary() {
     return Text(
-      'I have no experience yet, will be working on it soon.',
+      Strings.experiencesubline,
       style: TextStyles.body,
     );
   }
@@ -355,18 +355,22 @@ class SkillsWidgetState extends State<SkillsWidget> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Text(
-            education.post,
+            education.study,
             style: TextStyles.body.copyWith(
               color: Colors.white,
               fontSize: headingFontSize,
             ),
           ),
           Text(
-            education.organization,
+            education.institute,
             style: TextStyles.body,
           ),
           Text(
-            '${education.from}-${education.to}',
+            education.year,
+            style: TextStyles.body,
+          ),
+          Text(
+            education.grade,
             style: TextStyles.body,
           ),
         ],

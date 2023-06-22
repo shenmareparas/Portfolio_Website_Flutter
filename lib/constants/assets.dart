@@ -1,7 +1,6 @@
 class Assets {
   Assets._();
 
-  static const String programmer3 = 'assets/images/programmer-3.gif';
   static const String cookies = 'assets/images/cookies.svg';
 
   // social icons

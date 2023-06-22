@@ -1,8 +1,8 @@
 class Education {
-  String from;
-  String to;
-  String organization;
-  String post;
+  String year;
+  String grade;
+  String institute;
+  String study;
 
-  Education(this.from, this.to, this.organization, this.post);
+  Education(this.year, this.grade, this.institute, this.study);
 }

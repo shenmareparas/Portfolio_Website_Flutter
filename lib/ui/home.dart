@@ -30,7 +30,6 @@ class HomePageState extends State<HomePage> {
           builder: (context, constraints) {
             return Stack(
               children: <Widget>[
-                _buildBackground(),
                 _buildBody(context, constraints),
                 _buildMadeWith(
                   alignment: ResponsiveWidget.isSmallScreen(context)
@@ -42,31 +41,6 @@ class HomePageState extends State<HomePage> {
             );
           },
         ),
-      ),
-    );
-  }
-
-  // background:----------------------------------------------------------------
-  Widget _buildBackground() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        _buildVerticalDivider(),
-        _buildVerticalDivider(),
-        _buildVerticalDivider(),
-        _buildVerticalDivider(),
-        _buildVerticalDivider(),
-      ],
-    );
-  }
-
-  Widget _buildVerticalDivider() {
-    return Container(
-      width: 2,
-      height: double.maxFinite,
-      color: Colors.black26,
-      child: const VerticalDivider(
-        color: Colors.black26,
       ),
     );
   }
@@ -187,19 +161,27 @@ class HomePageState extends State<HomePage> {
   }) {
     return Align(
       alignment: alignment,
-      child: Wrap(
-        crossAxisAlignment: WrapCrossAlignment.center,
-        direction: axis,
-        children: <Widget>[
-          _buildMenuItem(
-              quarterTurns, Strings.menuGithubLink, Strings.menuGithub),
-          _buildMenuItem(
-              quarterTurns, Strings.menuLinkedinLink, Strings.menuLinkedin),
-          _buildMenuItem(
-              quarterTurns, Strings.menuInstagramLink, Strings.menuInstagram),
-          _buildMenuItem(
-              quarterTurns, Strings.menuTwitterLink, Strings.menuTwitter),
-        ],
+      child: SingleChildScrollView(
+        child: Wrap(
+          crossAxisAlignment: WrapCrossAlignment.center,
+          direction: axis,
+          children: <Widget>[
+            _buildMenuItem(
+                quarterTurns, Strings.menuGithubLink, Strings.menuGithub),
+            _buildMenuItem(
+                quarterTurns, Strings.menuLinkedinLink, Strings.menuLinkedin),
+            _buildMenuItem(quarterTurns, Strings.menuGooglePlayLink,
+                Strings.menuGooglePlay),
+            _buildMenuItem(
+                quarterTurns, Strings.menuInstagramLink, Strings.menuInstagram),
+            _buildMenuItem(
+                quarterTurns, Strings.menuWhatsappLink, Strings.menuWhatsapp),
+            _buildMenuItem(
+                quarterTurns, Strings.menuTelegramLink, Strings.menuTelegram),
+            _buildMenuItem(
+                quarterTurns, Strings.menuTwitterLink, Strings.menuTwitter),
+          ],
+        ),
       ),
     );
   }
@@ -241,7 +223,7 @@ class HomePageState extends State<HomePage> {
         alignment: alignment,
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          color: const Color(0xFF1e1e1e),
+          color: const Color(0xFF1A1A1A),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
